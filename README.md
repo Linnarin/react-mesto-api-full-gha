@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.51.161
+IP-адрес: 158.160.51.161
 
 Frontend https://linnarin.students.nomoredomains.sbs
 

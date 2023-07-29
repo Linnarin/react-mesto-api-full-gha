@@ -9,7 +9,7 @@ function PopupWithForm(props) {
         <div className={popupClass}>
             <div className="popup__container">
                 <h2 className="popup__title">{title}</h2>
-                <form name={name} noValidate method="post" className={`popup__input`} onSubmit={onSubmit}>
+                <form name={name} method="post" className={`popup__input`} onSubmit={onSubmit}>
                     {children}
                     <button type="submit" className="popup__btn">{btnText}</button>
                 </form>
