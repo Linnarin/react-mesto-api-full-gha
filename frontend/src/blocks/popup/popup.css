@@ -1,0 +1,30 @@
+/* @keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  animation: opacity 0.5s ease;
+}
+*/
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 0 19px;
+  transition: all 0.5s ease;
+	opacity: 0;
+	visibility: hidden;
+}

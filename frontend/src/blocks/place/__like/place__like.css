@@ -1,0 +1,13 @@
+.place__like {
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/heart.svg);
+  border-style: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 2px;
+}
+
+.place__like:hover {
+  opacity: 50%;
+}

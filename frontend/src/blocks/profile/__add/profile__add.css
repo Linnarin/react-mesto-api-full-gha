@@ -1,0 +1,22 @@
+.profile__add {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #FFF;
+  align-self: flex-end;
+  margin: auto 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+  
+@media (max-width: 694px) {
+  .profile__add {
+    width: 100%;
+    max-width: 282px;
+    align-self:center;
+  }
+}
+  
+.profile__add:hover {
+  opacity: 0.6;
+}

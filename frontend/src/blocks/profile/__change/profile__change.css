@@ -1,0 +1,11 @@
+.profile__change {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 694px) {
+  .profile__change {
+    margin: 0 0 0 20px;
+  }
+
+}

@@ -1,0 +1,8 @@
+.place__caption {
+  display: flex;
+  flex-direction: row;
+  max-width: 241px;
+  margin: 22px auto 25px;
+  justify-content: space-between;
+  align-items: center;
+}
