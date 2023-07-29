@@ -1,7 +1,7 @@
 const allowedCors = [
-  'http://localhost:3000',
-  'http://linnarin.students.nomoredomains.xyz',
+  'https://api.linnarin.students.nomoredomains.xyz',
   'https://linnarin.students.nomoredomains.xyz',
+  'https://localhost:3000',
 ];
 
 const cors = (req, res, next) => {
