@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://api.linnarin.students.nomoredomains.xyz',
-  'https://linnarin.students.nomoredomains.xyz',
+  'https://api.linnarin.students.nomoredomains.sbs',
+  'https://linnarin.students.nomoredomains.sbs',
   'https://localhost:3000',
 ];
 

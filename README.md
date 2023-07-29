@@ -9,8 +9,9 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.51.161
 
-Frontend https://...
+Frontend https://linnarin.students.nomoredomains.sbs
 
-Backend https://...
+Backend https://api.linnarin.students.nomoredomains.sbs
+
