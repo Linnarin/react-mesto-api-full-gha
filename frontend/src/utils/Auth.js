@@ -5,7 +5,9 @@ function checkResponse(res) {
     return Promise.reject(res.status);
   }
   
-  export const BASE_URL = "https://api.linnarin.students.nomoredomains.sbs";
+  //export const BASE_URL = "https://api.linnarin.students.nomoredomains.sbs";
+
+  export const BASE_URL = "https://localhost:3000";
   
   export function registerUser(email, password) {
     return fetch(`${BASE_URL}/signup`, {
