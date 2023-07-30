@@ -1,8 +1,7 @@
 const apiSetting = {
-  //url: 'https://mesto.nomoreparties.co/v1/cohort-64',
-  url: 'http://localhost:3000/',
+  url: 'https://api.linnarin.students.nomoredomains.sbs',
+  //url: 'http://localhost:3000/',
   headers: {
-    authorization: '24366505-8418-404e-906c-7290c9e8765a',
     'Content-Type': 'application/json'
   },
 };
