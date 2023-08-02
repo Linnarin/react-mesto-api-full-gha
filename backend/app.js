@@ -1,11 +1,11 @@
 const express = require('express');
 
-const cors = require('cors');
+// const cors = require('cors');
 
 const mongoose = require('mongoose');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 const { errors } = require('celebrate');
 
@@ -13,7 +13,7 @@ const cookieParser = require('cookie-parser');
 
 const router = require('./routes/index');
 
-// const cors = require('./middlewares/cors');
+const cors = require('./middlewares/cors');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -34,7 +34,7 @@ app.use(cookieParser());
 
 app.use(requestLogger);
 
-// app.use(cors);
+app.use(cors);
 
 app.use(router);
 
