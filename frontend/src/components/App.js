@@ -84,20 +84,24 @@ function App() {
   }
 
   React.useEffect(() => {
-    api.getUserInfo()
-      .then((userData) => {
-        setCurrentUser(userData);
-      })
-      .catch(console.log)
-  }, []);
+    if (isLoggedIn) {
+      api.getUserInfo()
+        .then((userData) => {
+          setCurrentUser(userData);
+        })
+        .catch(console.log)
+    }
+  }, [isLoggedIn]);
 
   React.useEffect(() => {
-    api.getArrCards()
-      .then((cardsData) => {
-        setCards(cardsData);
-      })
-      .catch(console.log)
-  }, []);
+    if (isLoggedIn) {
+      api.getArrCards()
+        .then((cardsData) => {
+          setCards(cardsData);
+        })
+        .catch(console.log)
+    }
+  }, [isLoggedIn]);
 
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
