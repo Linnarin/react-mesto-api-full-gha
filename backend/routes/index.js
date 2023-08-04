@@ -6,14 +6,14 @@ const NotFound = require('../utils/NotFound');
 const router = express.Router();
 
 const {
-  createUser, login,
+  createUser, loginUser,
 } = require('../controllers/users');
 
 const usersRouter = require('./users');
 const cardsRouter = require('./cards');
 
 router.use('/signup', validation.validateCreateAndLoginUser, createUser);
-router.use('/signin', validation.validateCreateAndLoginUser, login);
+router.use('/signin', validation.validateCreateAndLoginUser, loginUser);
 
 router.use(auth);
 
