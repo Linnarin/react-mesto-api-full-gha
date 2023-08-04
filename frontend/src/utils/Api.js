@@ -20,7 +20,7 @@ class Api {
     }
   }
 
-  _headers() {
+  _getHeaders() {
     return {
       ...this._headers,
       Authorization: `Bearer ${localStorage.getItem('jwt')}`,
