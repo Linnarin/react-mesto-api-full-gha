@@ -37,7 +37,7 @@ class Api {
   patchUserInfo(data) {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: data.name,
         about: data.about
@@ -48,7 +48,7 @@ class Api {
 
   getArrCards() {
     return fetch(`${this._url}/cards`, {
-      headers: this._headers,
+      headers: this._getHeaders(),
     })
       .then(this._checkResponse);
   }
@@ -57,7 +57,7 @@ class Api {
     //debugger;
     return fetch(`${this._url}/cards`, {
       method: 'POST',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify(
         data,
       )
@@ -68,7 +68,7 @@ class Api {
   deleteCard(cardId) {
     return fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: this._getHeaders(),
     })
       .then(this._checkResponse);
   }
@@ -76,7 +76,7 @@ class Api {
   patchAvatar(avatar) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify(avatar),
     })
       .then(this._checkResponse);
@@ -85,7 +85,7 @@ class Api {
   putLike(cardId) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: "PUT",
-      headers: this._headers,
+      headers: this._getHeaders(),
     })
       .then(this._checkResponse);
   }
@@ -93,7 +93,7 @@ class Api {
   deleteLike(cardId) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: this._getHeaders(),
     })
       .then(this._checkResponse);
   }
