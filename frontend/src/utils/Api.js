@@ -2,6 +2,7 @@ const apiSetting = {
   url: 'https://api.linnarin.students.nomoredomains.sbs',
   //url: 'http://localhost:3000/',
   headers: {
+    authorization: `Bearer ${localStorage.getItem('JWT')}`,
     'Content-Type': 'application/json',
   },
 };
