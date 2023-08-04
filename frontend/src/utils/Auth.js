@@ -27,12 +27,12 @@ function checkResponse(res) {
     }).then(checkResponse);
   }
   
-  export function getToken(jwt) {
+  export function getToken(token) {
     return fetch(`${BASE_URL}/users/me`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${jwt}`,
+        "Authorization": `Bearer ${token}`,
       },
     }).then(checkResponse);
   }
