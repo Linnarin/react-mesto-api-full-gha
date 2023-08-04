@@ -2,7 +2,6 @@ const apiSetting = {
   url: 'https://api.linnarin.students.nomoredomains.sbs',
   //url: 'http://localhost:3000/',
   headers: {
-    Authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json',
   },
 };
@@ -20,10 +19,17 @@ class Api {
       Promise.reject(res.status);
     }
   }
+
+  _headers() {
+    return {
+      ...this._headers,
+      Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+    }
+  }
  
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
-      headers: this._headers,
+      headers: this._getheaders(),
     })
       .then(this._checkResponse);
   }
