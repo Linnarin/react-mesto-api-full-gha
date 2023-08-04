@@ -27,15 +27,11 @@ const login = (req, res, next) => {
           .then((isValidUser) => {
             if (isValidUser) {
               const token = jwt.sign({ _id: user._id }, JWT_SECRET);
-              res.cookie('jwt', token, {
-                maxAge: 3600 * 24 * 7,
-                httpOnly: true,
-              });
               const {
                 _id, name, about, avatar,
               } = user;
               res.send({
-                _id, name, about, avatar, email,
+                _id, name, about, avatar, email, token,
               });
             } else {
               throw new AuthError('Неверный логин или пароль');
