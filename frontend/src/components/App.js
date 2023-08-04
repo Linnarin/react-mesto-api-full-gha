@@ -52,7 +52,7 @@ function App() {
       navigate("/");
     }).catch(() => {
       setPopupImage(reject);
-      setPopupTitle("Что-то пошло не так! Попробуйте ещё раз.");
+      setPopupTitle("Неверная почта или пароль.");
       handleInfoTooltip();
     });
   }
