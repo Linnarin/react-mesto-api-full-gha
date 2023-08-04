@@ -90,13 +90,12 @@ class Api {
       .then(this._checkResponse);
   }
 
-  deleteLike(id) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+  deleteLike(cardId) {
+    return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'DELETE',
       headers: this._getHeaders(),
-    }).then((res) => {
-      return this._handleRes(res);
-    });
+    })
+      .then(this._checkResponse);
   }
 }
 
