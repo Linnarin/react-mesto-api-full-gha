@@ -29,7 +29,7 @@ class Api {
  
   getUserInfo() {
     return fetch(`${this._url}/users/me`, {
-      headers: this._getheaders(),
+      headers: this._getHeaders(),
     })
       .then(this._checkResponse);
   }
