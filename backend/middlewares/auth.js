@@ -3,7 +3,7 @@ const AuthError = require('../utils/AuthError');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 
-const authMiddleW = (req, res, next) => {
+const auth = (req, res, next) => {
   const { authorization } = req.headers;
   const bearer = 'Bearer ';
   if (!authorization || !authorization.startsWith(bearer)) {
@@ -21,4 +21,4 @@ const authMiddleW = (req, res, next) => {
   return next();
 };
 
-module.exports = authMiddleW;
+module.exports = { auth };
