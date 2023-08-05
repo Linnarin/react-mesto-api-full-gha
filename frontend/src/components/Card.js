@@ -15,6 +15,7 @@ function Card(props) {
     );
 
     function handleLike () {
+        console.log(isLiked)
         onCardLike(card);
     }
 

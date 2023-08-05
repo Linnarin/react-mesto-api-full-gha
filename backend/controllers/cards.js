@@ -76,6 +76,24 @@ const likeCard = (req, res, next) => {
 };
 
 const deleteLikeCard = (req, res, next) => {
+  const { id } = req.params;
+  const idUser = req.user._id;
+  Card.findByIdAndUpdate(id, { $pull: { likes: idUser } }, { new: true })
+    .orFail(() => next(new NotFound('Карточка не найдена')))
+    .then((card) => {
+      res.send(card);
+    })
+    .catch((err) => {
+      if (err.name === 'ValidationError' || err.name === 'CastError') {
+        next(new NotFound('Переданы некорректные данные для удаления лайка'));
+      } else {
+        next(err);
+      }
+    });
+};
+
+/*
+const deleteLikeCard = (req, res, next) => {
   const { cardId } = req.params;
   Card.findByIdAndUpdate(
     cardId,
@@ -96,7 +114,7 @@ const deleteLikeCard = (req, res, next) => {
       }
     });
 };
-
+*/
 module.exports = {
   createCard,
   getCards,
