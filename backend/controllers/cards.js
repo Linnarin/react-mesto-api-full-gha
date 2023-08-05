@@ -63,7 +63,7 @@ const likeCard = (req, res, next) => {
       }
     })
     .catch((err) => {
-      if (err.name === 'ValidationError' || err.name === 'CastError') {
+      if (err.name === 'CastError') {
         next(new BadRequest('Введены некоректные данные'));
       } else {
         next(err);
@@ -107,7 +107,7 @@ const deleteLikeCard = (req, res, next) => {
       res.send(card);
     })
     .catch((err) => {
-      if (err.name === 'ValidationError' || err.name === 'CastError') {
+      if (err.name === 'CastError') {
         next(new NotFound('Переданы некорректные данные для удаления лайка'));
       } else {
         next(err);
